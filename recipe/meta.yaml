@@ -1,5 +1,5 @@
 {% set name = "pephubclient" %}
-{% set version = "0.4.4" %}
+{% set version = "0.5.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pephubclient-{{ version }}.tar.gz
-  sha256: 0723b84f165024a08885057b80daa314987474ac6be04cb34e4b0611e7b91561
+  sha256: 41a8b7af90477c027f0f9205383178381a2bd042d2da18d9e047be81d9597b7a
 
 build:
   entry_points:
     - phc = pephubclient.__main__:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
